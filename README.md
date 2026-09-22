@@ -53,11 +53,53 @@ cat /etc/os-release
 
 Z virtuálního serveru se odhlaste příkazem `exit`. Po dokončení práce můžete server vypnout příkazem `vagrant halt`, který zadáte na svém počítači v adresáři `srv01`.
 
-## 5. Uložte a odevzdejte práci
+## 5. Vygenerujte kontrolní kód na serveru
+
+Přihlaste se do serveru příkazem `vagrant ssh`. Následující příkazy spusťte **uvnitř virtuálního serveru**, ve svém domovském adresáři. Skript nevyžaduje `sudo`.
+
+Stáhněte si [ověřovací skript](./overeni-serveru.sh):
+
+```bash
+cd ~
+curl -fL https://raw.githubusercontent.com/sposdknl/git-vagrant/main/overeni-serveru.sh -o overeni-serveru.sh
+```
+
+Pokud nemáte `curl`, můžete použít `wget`:
+
+```bash
+wget -O overeni-serveru.sh https://raw.githubusercontent.com/sposdknl/git-vagrant/main/overeni-serveru.sh
+```
+
+Prohlédněte si skript a spusťte jej bez argumentů:
+
+```bash
+cat overeni-serveru.sh
+bash overeni-serveru.sh
+```
+
+Skript ověří Linux a rozpoznanou virtualizaci a vypíše unikátní kontrolní kód i záznam s distribucí, hostname, kernelem a časem. **Celý vypsaný Markdown blok (kód i záznam) vložte do části Moje řešení.** Každé spuštění vytvoří nový kód; odevzdejte jeden odpovídající pár kódu a záznamu.
+
+Kód slouží jako kontrolní záznam pro vyučujícího. Veřejný skript nemůže zaručit pravost výsledku ani sám prokázat, že VM vznikla Vagrantem; součástí odevzdání proto zůstává funkční `Vagrantfile` a případné předvedení serveru.
+
+## 6. Bonus: vlastní tematický obrázek
+
+- Nechte si pomocí generátoru obrázků vytvořit vlastní obrázek na téma **Linux, Git, Vagrant a virtuální servery**.
+- Uložte jej do adresáře `Images`, například jako `Images/muj-linux-server.png`.
+- Nahraďte úvodní obrázek v tomto README odkazem na svůj soubor. Upravte také jeho alternativní popis:
+
+```markdown
+![Moje virtuální Linuxová laboratoř](./Images/muj-linux-server.png)
+```
+
+- Do části **Moje řešení** doplňte použitý generátor a zadání (prompt).
+- Obrázek přidejte do Gitu a na GitHubu ověřte, že se v README zobrazuje.
+
+## 7. Uložte a odevzdejte práci
 
 - Do části **Moje řešení** níže doplňte zvolenou distribuci, adresář serveru a výsledek prvního spuštění.
 - V kořeni repozitáře ověřte ignorování místních dat:
 
+Pokud plníte bonus, přidejte vlastní obrázek příkazem `git add Images/muj-linux-server.png` (upravte podle názvu svého souboru).
 
 Pro příklad s adresářem `srv01` uložte změny a odešlete je na GitHub:
 
@@ -75,7 +117,9 @@ Použili-li jste jiné jméno adresáře, upravte cesty v příkazech. Na GitHub
 .
 ├── README.md
 ├── .gitignore
+├── overeni-serveru.sh
 ├── LICENSE
+├── Vagrant
 ├── Images/
 │   └── git-vagrant.png
 └── srv01/
@@ -90,6 +134,7 @@ Adresář `srv01/.vagrant/` vznikne pouze lokálně při práci s Vagrantem a ne
 - [ ] Vybral/a jsem Linuxovou distribuci ze vzorů ročníkového projektu.
 - [ ] Server se spustí a mohu se do něj přihlásit pomocí `vagrant ssh`.
 - [ ] `.gitignore` vylučuje `.vagrant/` a žádné soubory z něj nejsou sledované Gitem.
+- [ ] Na serveru jsem spustil/a ověřovací skript a vložil/a kód i celý záznam do části Moje řešení.
 - [ ] Doplnil/a jsem část Moje řešení a odeslal/a změny do GitHub Classroom repozitáře.
 
 ## Moje řešení
@@ -99,6 +144,8 @@ Adresář `srv01/.vagrant/` vznikne pouze lokálně při práci s Vagrantem a ne
 - **Adresář serveru:** doplňte
 - **Výsledek spuštění a přihlášení:** doplňte
 - **Případné problémy a jejich řešení:** doplňte
+- **Kontrolní kód a záznam ze serveru:** sem vložte celý Markdown blok vypsaný skriptem
+- **Bonus – generátor obrázku a použitý prompt:** doplňte, pokud plníte bonus
 
 ## Nápověda a odkazy
 
@@ -106,5 +153,3 @@ Adresář `srv01/.vagrant/` vznikne pouze lokálně při práci s Vagrantem a ne
 - [Jak probíhá výuka operačních systémů na SPOŠ](https://open-tech.cz/2024/09/01/operacni-systemy-na-spos-rovnou-do-praxe/)
 - [Dokumentace Vagrantu](https://developer.hashicorp.com/vagrant/docs)
 - [Dokumentace .gitignore](https://git-scm.com/docs/gitignore)
-
-Další úkoly budou doplněny v navazující části zadání.
