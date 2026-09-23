@@ -83,7 +83,7 @@ Kód slouží jako kontrolní záznam pro vyučujícího. Veřejný skript nemů
 
 ## 6. Bonus: vlastní tematický obrázek
 
-- Nechte si pomocí generátoru obrázků vytvořit vlastní obrázek na téma **Linux, Git, Vagrant a virtuální servery**.
+- Nechte si pomocí AI vytvořit vlastní obrázek na téma **Linux, Git, Vagrant a virtuální servery**.
 - Uložte jej do adresáře `Images`, například jako `Images/muj-linux-server.png`.
 - Nahraďte úvodní obrázek v tomto README odkazem na svůj soubor. Upravte také jeho alternativní popis:
 
@@ -91,7 +91,7 @@ Kód slouží jako kontrolní záznam pro vyučujícího. Veřejný skript nemů
 ![Moje virtuální Linuxová laboratoř](./Images/muj-linux-server.png)
 ```
 
-- Do části **Moje řešení** doplňte použitý generátor a zadání (prompt).
+- Do části **Moje řešení** doplňte použitý AI nastroj a zadání (prompt).
 - Obrázek přidejte do Gitu a na GitHubu ověřte, že se v README zobrazuje.
 
 ## 7. Uložte a odevzdejte práci
@@ -145,7 +145,7 @@ Adresář `srv01/.vagrant/` vznikne pouze lokálně při práci s Vagrantem a ne
 - **Výsledek spuštění a přihlášení:** doplňte
 - **Případné problémy a jejich řešení:** doplňte
 - **Kontrolní kód a záznam ze serveru:** sem vložte celý Markdown blok vypsaný skriptem
-- **Bonus – generátor obrázku a použitý prompt:** doplňte, pokud plníte bonus
+- **Bonus – AI obrázek a použitý prompt:** doplňte, pokud plníte bonus
 
 ## Nápověda a odkazy
 
