@@ -139,12 +139,22 @@ Adresář `srv01/.vagrant/` vznikne pouze lokálně při práci s Vagrantem a ne
 
 ## Moje řešení
 
-- **Distribuce a verze:** doplňte
+- **Distribuce a verze:** Debian GNU/Linux 13 (trixie)
 - **Použitý Vagrant box:** doplňte
-- **Adresář serveru:** doplňte
+- **Adresář serveru:** srv01
 - **Výsledek spuštění a přihlášení:** doplňte
 - **Případné problémy a jejich řešení:** doplňte
-- **Kontrolní kód a záznam ze serveru:** sem vložte celý Markdown blok vypsaný skriptem
+- **Kontrolní kód a záznam ze serveru:** **Kontrolní kód:** `SPOS-3I-1f07061c7218292eb04d36ab4a90e4269d25fe23bb902f79ba8f3deb538c7091`
+ 
+```text
+Úloha: git-vagrant / SPOŠ / 3. I / v1
+Distribuce: Debian GNU/Linux 13 (trixie)
+Hostname: debian13
+Kernel: 6.12.48+deb13-amd64
+Virtualizace: oracle
+Čas UTC: 2026-09-25T06:55:06Z
+Náhodné ID: 90092b75-1719-4897-aafe-4d2555a8dd4c
+```
 - **Bonus – AI obrázek a použitý prompt:** doplňte, pokud plníte bonus
 
 ## Nápověda a odkazy
